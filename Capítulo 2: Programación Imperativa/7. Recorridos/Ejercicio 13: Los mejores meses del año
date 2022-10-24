@@ -1,0 +1,20 @@
+function meses(balances){
+  let meses = [];
+  for(let balance of balances){
+    agregar(meses, balance.mes);
+  }return meses;
+}
+
+function afortunados(balances){
+  let afortunado = [];
+  for(let balance of balances){
+    if(balance.ganancia > 1000){
+      agregar(afortunado, balance);
+    }
+      
+  }return afortunado;
+}
+
+function mesesAfortunados(balances){
+return meses(afortunados(balances));
+}
